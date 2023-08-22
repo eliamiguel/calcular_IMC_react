@@ -1,0 +1,87 @@
+.form{
+margin:20px auto 0;
+width: 500px;
+padding: 20px;
+background-color:var(--corFundo);
+
+}
+h1{
+  color: var(--cordSecudaria);
+  margin-bottom: 30px;
+}
+.labelPeso{
+font-size: 20px;
+display: block;
+}
+.inputPeso{
+margin-top: 10px;
+width: 100%;
+padding: 8px;
+}
+.labelAltura{
+  margin-top: 10px;
+  font-size: 20px;
+  display: block;
+}
+.inputAltura{
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+p{
+  margin-top: 10px;
+  font-size: 20px;
+}
+.valido{
+  display:normal;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+button{
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--corButton);
+  background-color:var(--cordSecudaria) ;
+  outline: var(--cordSecudaria);
+  border-color: var(--cordSecudaria);
+}
+
+:root{
+  --corFundo:aliceblue;
+  --corButton:white;
+  --cordSecudaria:#00BAD1;
+}
+.table{
+  margin: 0 auto 40px;
+border-collapse: collapse;
+max-width: 500px;
+width: 100%;
+}
+.table, .tableTh, .tableTd{
+  
+  border:1px solid #066471;
+}
+
+.tableTh, .tableTd{
+  padding: 10px;
+  align-items: center;
+}
+.caption{
+  font-weight: bold;
+  color: #00BAD1;
+  border:1px solid #066471;
+  padding: 10px;
+  
+}
+.valido{
+  display:normal;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+
