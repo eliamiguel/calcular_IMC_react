@@ -2,11 +2,11 @@ import { useState } from "react";
 import styles from './Formulario.module.css';
 
 const Formulario = ()=> {
-  const [peso, setPeso]= useState(0);
-  const [altura, setAltura]=useState(0);
+  const [peso, setPeso]= useState('');
+  const [altura, setAltura]=useState('');
   const [IMC, setIMC]=useState(0)
-  const [resultado, setResultado] = useState("");
-  const [classificacao, setClassificacao] = useState("");
+  const [resultado, setResultado] = useState('');
+  const [classificacao, setClassificacao] = useState('');
   
   const pesoPessoa = (evento)=>{
     setPeso(parseFloat(evento.target.value));
@@ -24,6 +24,7 @@ const IMC = (peso / (altura * altura)).toFixed(2);
   setClassificacao("Magro/a");
   }else if (IMC <= 24.9) {
       setClassificacao("Normal");
+      
   }else if (IMC <= 29.9) {
   setClassificacao("Sobrepeso");
   }else if (IMC <= 39.9) {
@@ -39,10 +40,10 @@ const IMC = (peso / (altura * altura)).toFixed(2);
    
     <form className={styles.form}>
       <h1>Calculadora</h1>
-      <label className={styles.labelAltura} htmlFor="altura">Informe sua altura: </label>
-      <input className={styles.inputAltura}  type="number" id="altura" onChange={alturaPessoa} />
-      <label className={styles.labelPeso} htmlFor="peso">Informe seu peso: </label>
-      <input className={styles.inputPeso}  type="number" id="peso" onChange={pesoPessoa} />
+      <label className={styles.labelAltura} htmlFor="altura">Informe sua altura (m): </label>
+      <input value={altura}  className={styles.inputAltura}  type="number" id="altura" onChange={alturaPessoa} placeholder="0"/>
+      <label className={styles.labelPeso} htmlFor="peso">Informe seu peso (kg): </label>
+      <input value={peso}  className={styles.inputPeso}  type="number" id="peso" onChange={pesoPessoa} placeholder="0"/>
      
       <button onClick={resultadoIMC} type="button">Calcular IMC</button>
       <p><b>Resultado:</b>  {IMC}</p>
