@@ -15,11 +15,11 @@ const Formulario = ()=> {
     setAltura(parseFloat( evento.target.value));
   }
   const resultadoIMC = ()=>{
-    setIMC((peso / (altura * altura)))
- 
+   
 const IMC = (peso / (altura * altura)).toFixed(2);
     setResultado(IMC);
-        
+    setIMC(IMC)
+      
   if (IMC <= 18.5) {
   setClassificacao("Magro/a");
   }else if (IMC <= 24.9) {
